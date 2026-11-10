@@ -1,0 +1,53 @@
+{
+ "lp": {
+  "max_lp": 1.1102230246251565e-15,
+  "max_chain": 8.881784197001252e-16,
+  "n_hall": 3288,
+  "hall_ok": true,
+  "n_sup": 13306,
+  "sup_ok": true
+ },
+ "res": {
+  "n": 80,
+  "max_diff": 0.0
+ },
+ "floor": {
+  "n": 24,
+  "max_diff": 0.0
+ },
+ "multistate": {
+  "n": 80,
+  "min_ratio": 0.9641024001295124
+ },
+ "four": {
+  "Independent": {
+   "exact": 2.0,
+   "sim": 1.9892,
+   "hw": 0.027097175298741758,
+   "anymiss": 7.84
+  },
+  "Aligned groups": {
+   "exact": 10.0,
+   "sim": 9.9656,
+   "hw": 0.05537860112331067,
+   "anymiss": 36.0
+  },
+  "Interleaved groups": {
+   "exact": 2.0,
+   "sim": 1.9518,
+   "hw": 0.03796148156198851,
+   "anymiss": 4.0
+  },
+  "Common cause": {
+   "exact": 10.0,
+   "sim": 9.9968,
+   "hw": 0.078390747213463,
+   "anymiss": 20.0
+  }
+ },
+ "quad": 6.661338147750939e-16,
+ "sampler": {
+  "max_disc": 0.002799180029805226,
+  "margin": 0.0062382786152656074
+ }
+}
