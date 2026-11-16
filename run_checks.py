@@ -8,7 +8,8 @@ from policies import Ctx, exact_anchor, exact_floor, greedy_W, greedy_hybrid, MU
 from model import phi, Geometry, Regime
 from experiment import rngs, run_geometry
 
-OUT = "/home/claude/rfrescue/results"
+from paths import RESULTS
+OUT = str(RESULTS)
 rng = np.random.default_rng(np.random.SeedSequence([20261001, 77]))
 
 

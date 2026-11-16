@@ -1,0 +1,107 @@
+location,quantity,value,script,result_file,key
+Table 3,mean delivery anchor b=12 (%),88.81,run_all.py,het.json,deliv[anchor|12]
+Table 3,certificate anchor b=12 (%),84.24,run_all.py,het.json,cert[anchor|12]
+Table 3,mean delivery indep b=12 (%),90.03,run_all.py,het.json,deliv[indep|12]
+Table 3,certificate indep b=12 (%),84.06,run_all.py,het.json,cert[indep|12]
+Table 3,mean delivery hybrid1 b=12 (%),90.06,run_all.py,het.json,deliv[hybrid1|12]
+Table 3,certificate hybrid1 b=12 (%),84.11,run_all.py,het.json,cert[hybrid1|12]
+Table 3,mean delivery portfolio b=12 (%),90.08,run_all.py,het.json,deliv[portfolio|12]
+Table 3,certificate portfolio b=12 (%),84.09,run_all.py,het.json,cert[portfolio|12]
+Table 3,mean delivery condrob b=12 (%),88.92,run_all.py,het.json,deliv[condrob|12]
+Table 3,certificate condrob b=12 (%),84.24,run_all.py,het.json,cert[condrob|12]
+Table 3,mean delivery cloud b=12 (%),90.14,run_all.py,het.json,deliv[cloud|12]
+Table 3,certificate cloud b=12 (%),84.07,run_all.py,het.json,cert[cloud|12]
+Table 3,mean delivery degree b=12 (%),86.97,run_all.py,het.json,deliv[degree|12]
+Table 3,certificate degree b=12 (%),83.67,run_all.py,het.json,cert[degree|12]
+Table 3,mean delivery anchor b=24 (%),94.37,run_all.py,het.json,deliv[anchor|24]
+Table 3,certificate anchor b=24 (%),89.38,run_all.py,het.json,cert[anchor|24]
+Table 3,mean delivery indep b=24 (%),95.32,run_all.py,het.json,deliv[indep|24]
+Table 3,certificate indep b=24 (%),89.07,run_all.py,het.json,cert[indep|24]
+Table 3,mean delivery hybrid1 b=24 (%),95.34,run_all.py,het.json,deliv[hybrid1|24]
+Table 3,certificate hybrid1 b=24 (%),89.20,run_all.py,het.json,cert[hybrid1|24]
+Table 3,mean delivery portfolio b=24 (%),95.33,run_all.py,het.json,deliv[portfolio|24]
+Table 3,certificate portfolio b=24 (%),89.12,run_all.py,het.json,cert[portfolio|24]
+Table 3,mean delivery condrob b=24 (%),94.52,run_all.py,het.json,deliv[condrob|24]
+Table 3,certificate condrob b=24 (%),89.38,run_all.py,het.json,cert[condrob|24]
+Table 3,mean delivery cloud b=24 (%),95.34,run_all.py,het.json,deliv[cloud|24]
+Table 3,certificate cloud b=24 (%),89.12,run_all.py,het.json,cert[cloud|24]
+Table 3,mean delivery degree b=24 (%),91.58,run_all.py,het.json,deliv[degree|24]
+Table 3,certificate degree b=24 (%),88.31,run_all.py,het.json,cert[degree|24]
+Abstract; 6.5,loss under independence b=24 (%),0.773,run_all.py,het.json,abl[24].indep
+Abstract; 6.5,loss under shared weather b=24 (%),3.975,run_all.py,het.json,abl[24].cond
+Abstract; 6.5,loss under complete field b=24 (%),4.666,run_all.py,het.json,abl[24].field
+6.5,paired diff shared-indep (pp),3.201 ± 0.109,run_all.py,het.json,abl[24]
+6.5,paired diff field-shared (pp),0.692 ± 0.106,run_all.py,het.json,abl[24]
+"6.6, Fig. 2",independence-greedy violations b=6,0,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",cloud-informed violations b=6,0,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",portfolio violations b=6,0,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",independence-greedy violations b=12,0,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",cloud-informed violations b=12,0,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",portfolio violations b=12,0,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",independence-greedy violations b=18,1,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",cloud-informed violations b=18,3,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",portfolio violations b=18,0,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",independence-greedy violations b=24,4,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",cloud-informed violations b=24,2,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",portfolio violations b=24,0,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",independence-greedy violations b=30,6,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",cloud-informed violations b=30,2,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",portfolio violations b=30,0,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",independence-greedy violations b=36,21,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",cloud-informed violations b=36,1,run_all.py,het.json,cert vs jmin
+"6.6, Fig. 2",portfolio violations b=36,0,run_all.py,het.json,cert vs jmin
+"6.6, Table S3",deficit range (pp),0.004 to 1.83,analyze.py,het.json,deficits()
+"6.4, Fig. 1",paired portfolio-indep b=6 (pp),0.0082 ± 0.0169,analyze.py,het.json,deliv
+"6.4, Fig. 1",paired portfolio-indep b=12 (pp),0.0454 ± 0.0383,analyze.py,het.json,deliv
+"6.4, Fig. 1",paired portfolio-indep b=18 (pp),0.0139 ± 0.0174,analyze.py,het.json,deliv
+"6.4, Fig. 1",paired portfolio-indep b=24 (pp),0.0135 ± 0.0132,analyze.py,het.json,deliv
+"6.4, Fig. 1",paired portfolio-indep b=30 (pp),0.0486 ± 0.0387,analyze.py,het.json,deliv
+"6.4, Fig. 1",paired portfolio-indep b=36 (pp),0.4266 ± 0.1322,analyze.py,het.json,deliv
+6.4,certificate gain b=18 (pp),0.0525 ± 0.0369,analyze.py,het.json,cert
+"6.4, Table S2",ahead/tied/behind b=18,8/14/2,analyze.py,het.json,deliv
+6.4,pooled 48-geometry difference b=18 (pp),0.0159 ± 0.0131,run_all.py,"het.json, extra.json",deliv
+6.4,homogeneous certificate b=12 (%),88.281,run_all.py,hom.json,cert[portfolio|12]
+6.4,homogeneous certificate b=18 (%),89.746,run_all.py,hom.json,cert[portfolio|18]
+6.4,homogeneous certificate b=24 (%),91.211,run_all.py,hom.json,cert[portfolio|24]
+5.4,distinct feasible candidates (min/median/max),4/5/7,run_all.py,het.json,n_feasible
+6.7,need-based [24] delivery / certificate b=24 (%),91.58 / 88.31,run_all.py,het.json,need|24
+6.7,need-based violations b=24,23,run_all.py,het.json,need|24
+6.7,departure resid03 loss b=24 (%),5.045,run_all.py,het.json,variants.resid03
+6.7,departure resid03 half-width (pp),0.277,run_all.py,het.json,variants.resid03
+6.7,departure markov09 loss b=24 (%),4.764,run_all.py,het.json,variants.markov09
+6.7,departure markov09 half-width (pp),0.452,run_all.py,het.json,variants.markov09
+6.7,baseline half-width b=24 (pp),0.138,run_all.py,het.json,deliv
+Table 5,target 0.86 feasible/active,24/1,run_targets.py,targets.json,t[0.86]
+Table 5,target 0.86 nominal cost (pp),0.017,run_targets.py,targets.json,d_ind-d_port
+Table 5,target 0.86 gap to exact (pp),0.020 ± 0.047,run_targets.py,targets.json,d_exact-d_port
+Table 5,target 0.87 feasible/active,22/0,run_targets.py,targets.json,t[0.87]
+Table 5,target 0.87 nominal cost (pp),-0.011,run_targets.py,targets.json,d_ind-d_port
+Table 5,target 0.87 gap to exact (pp),-0.005 ± 0.015,run_targets.py,targets.json,d_exact-d_port
+Table 5,target 0.88 feasible/active,20/2,run_targets.py,targets.json,t[0.88]
+Table 5,target 0.88 nominal cost (pp),0.013,run_targets.py,targets.json,d_ind-d_port
+Table 5,target 0.88 gap to exact (pp),0.019 ± 0.048,run_targets.py,targets.json,d_exact-d_port
+Table 5,target 0.89 feasible/active,17/2,run_targets.py,targets.json,t[0.89]
+Table 5,target 0.89 nominal cost (pp),-0.004,run_targets.py,targets.json,d_ind-d_port
+Table 5,target 0.89 gap to exact (pp),-0.002 ± 0.024,run_targets.py,targets.json,d_exact-d_port
+Table 5,target 0.9 feasible/active,10/4,run_targets.py,targets.json,t[0.9]
+Table 5,target 0.9 nominal cost (pp),0.001,run_targets.py,targets.json,d_ind-d_port
+Table 5,target 0.9 gap to exact (pp),-0.025 ± 0.027,run_targets.py,targets.json,d_exact-d_port
+Table 5,target 0.91 feasible/active,1/1,run_targets.py,targets.json,t[0.91]
+Table 5,target 0.91 nominal cost (pp),-0.085,run_targets.py,targets.json,d_ind-d_port
+Table 5,target 0.91 gap to exact (pp),-0.002,run_targets.py,targets.json,d_exact-d_port
+6.7,intermediate K=12 test gap (pp),0.000 ± 0.000,run_targets.py,inter.json,d_exact-d_port
+6.7,intermediate K=20 test gap (pp),0.091 ± 0.102,run_targets.py,inter.json,d_exact-d_port
+6.7,intermediate K=30 test gap (pp),0.040 ± 0.104,run_targets.py,inter.json,d_exact-d_port
+6.3,envelope vs LP max difference,1.11e-15,run_checks.py,checks.json,lp.max_lp
+Suppl.,Hall identities / supermodularity inequalities,3288 / 13306,run_checks.py,checks.json,lp
+Suppl.,sampler max discrepancy / margin,0.0028 / 0.0062,run_checks.py,checks.json,sampler
+6.5,radius study delivery 0.5x / 4x (%),95.864 / 93.932,run_misc.py,misc.json,radius
+6.6,six-flow binding (het) / mean cost / mean gain,5 / 0.56 / 2.01,run_misc.py,misc.json,six.het
+6.6,"runtime portfolio het / hom (s), matching (us)",0.15 / 0.12 / 0.96,run_misc.py,misc.json,runtime
+6.2,schedule pairs checked / violations,31459098 / 0,run_schedule.py,schedule.json,geometries
+6.2,worst SNR margin (dB),1.97,run_schedule.py,schedule.json,worst.snr_margin
+6.2,minimum arrival slack (ms),34.4,run_schedule.py,schedule.json,worst.arrival_slack
+6.2,latest completion (ms),272.45,run_schedule.py,schedule.json,worst.completion
+6.2,replicas per frame b=24 (deduplicated per satellite),101.9,run_schedule.py,schedule.json,replicas24
+6.1,anchor delivery range over 22 tie rules b=24 (%),94.34 to 94.38,run_audit_ties.py,audit_ties.json,summary
+6.1,"portfolio delivery, two independent 24-geometry sets b=24 (%)",95.33 / 95.05,run_audit_ties.py,"het.json, extra.json",summary.sampling

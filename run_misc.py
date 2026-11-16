@@ -7,7 +7,8 @@ from model import Geometry, Regime
 from experiment import rngs, run_geometry
 from smallgraph import G
 
-OUT = "/home/claude/rfrescue/results"
+from paths import RESULTS
+OUT = str(RESULTS)
 out = {}
 rng = np.random.default_rng(np.random.SeedSequence([20261001, 88]))
 SETS6 = np.array([[(m >> k) & 1 for k in range(6)] for m in range(64)], bool)

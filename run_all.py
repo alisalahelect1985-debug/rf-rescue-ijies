@@ -3,7 +3,8 @@ from multiprocessing import Pool
 from experiment import run_geometry
 from model import PMIN
 
-OUT = "/home/claude/rfrescue/results"
+from paths import RESULTS
+OUT = str(RESULTS)
 os.makedirs(OUT, exist_ok=True)
 ALLOW = (0.005, 0.0025, 0.01, 0.02)
 VARIANTS = {"resid03": {"resid_rho": 0.3}, "markov09": {"markov": 0.9}}

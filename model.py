@@ -46,9 +46,29 @@ def ecef_to_local(P):
     return np.stack([rr * (u @ E_HAT), rr * (u @ N_HAT)], axis=1)
 
 
-def constellation(rng):
+MU_E = 398600.4418          # km^3/s^2
+OMEGA_E = 7.2921159e-5      # rad/s
+N_ORB = np.sqrt(MU_E / RS ** 3)
+
+
+def constellation_at(raan0, u0, t):
+    """Satellite positions t seconds after the snapshot, expressed in the Earth-fixed frame of the snapshot
+    (circular orbits; Earth rotation removed by rotating the inertial positions by -OMEGA_E t)."""
+    P = np.arange(NPLANE)
+    S = np.arange(NPER)
+    Om = (raan0 + 2 * np.pi * P[:, None] / NPLANE + 0 * S[None, :]).ravel() - OMEGA_E * t
+    u = (u0 + 2 * np.pi * S[None, :] / NPER + 2 * np.pi * FPH * P[:, None] / (NPLANE * NPER)).ravel() + N_ORB * t
+    x = np.cos(u) * np.cos(Om) - np.sin(u) * np.cos(INC) * np.sin(Om)
+    y = np.cos(u) * np.sin(Om) + np.sin(u) * np.cos(INC) * np.cos(Om)
+    z = np.sin(u) * np.sin(INC)
+    return RS * np.stack([x, y, z], axis=1)
+
+
+def constellation(rng, return_params=False):
     raan0 = rng.uniform(0, 2 * np.pi)
     u0 = rng.uniform(0, 2 * np.pi)
+    if return_params:
+        return constellation_at(raan0, u0, 0.0), (raan0, u0)
     P = np.arange(NPLANE)
     S = np.arange(NPER)
     Om = raan0 + 2 * np.pi * P[:, None] / NPLANE + 0 * S[None, :]
@@ -97,9 +117,11 @@ class Geometry:
 
     def __init__(self, rng, K=60, gamma_req=8.0, ncell_side=5, sigma_theta=None):
         self.K = K
-        sats = constellation(rng)
+        sats, self.orbit_params = constellation(rng, return_params=True)
+        self.sats = sats
         self.xy = uav_positions(rng, K)
         U = local_to_ecef(self.xy[:, 0], self.xy[:, 1], RA)
+        self.U = U
         se, d = elev_range(U, sats)
         se_m = np.where(se > np.sin(np.radians(30.0)), se, -2)
         a = np.argmax(se_m, axis=1)

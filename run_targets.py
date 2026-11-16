@@ -5,7 +5,8 @@ from experiment import run_geometry, rngs, N_TRAIN, N_VAL
 from policies import portfolio, exact_floor, exact_anchor, greedy_hybrid, greedy_W, MU_GRID
 from model import Geometry, Regime
 
-OUT = "/home/claude/rfrescue/results"
+from paths import RESULTS
+OUT = str(RESULTS)
 TARGETS = [float(x) for x in sys.argv[1].split(",")] if len(sys.argv) > 1 else [0.86, 0.87, 0.88, 0.89, 0.90]
 
 

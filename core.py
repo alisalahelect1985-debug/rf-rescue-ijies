@@ -176,3 +176,17 @@ def scen_commit(r, F, MF, MT, tptr, tflw):
         if _augment_from_token(r, tptr, tflw, F[n], MF[n], MT[n], prev_t, seen, queue, True):
             cnt += 1
     return cnt
+
+
+@njit(cache=True)
+def matching_assign(failed, R, tptr, tflw, T):
+    """Same matching as matching_size, returning match_t (flow served by each token, -1 if idle)."""
+    K = failed.shape[0]
+    match_f = -np.ones(K, np.int64)
+    match_t = -np.ones(T, np.int64)
+    prev_t = np.zeros(K, np.int64)
+    seen = np.zeros(K, np.bool_)
+    queue = np.zeros(T + 1, np.int64)
+    for j in range(R.shape[0]):
+        _augment_from_token(R[j], tptr, tflw, failed, match_f, match_t, prev_t, seen, queue, True)
+    return match_t

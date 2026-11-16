@@ -1,6 +1,7 @@
 import json, numpy as np
 from scipy import stats
-D = "/home/claude/rfrescue/results"
+from paths import RESULTS
+D = str(RESULTS)
 POL = ["anchor", "condrob", "indep", "hybrid1", "portfolio", "cloud", "degree", "need"]
 B = [6, 12, 18, 24, 30, 36]
 

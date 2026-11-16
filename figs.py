@@ -7,8 +7,8 @@ from model import phi
 
 C1, C2, C3, C4, C5 = "#2a78d6", "#eb6834", "#1baf7a", "#eda100", "#e87ba4"
 GRAY = "#6b6b6b"
-OUT = "/home/claude/rfrescue/figs"
-import os; os.makedirs(OUT, exist_ok=True)
+from paths import FIGS
+OUT = str(FIGS)
 plt.rcParams.update({"font.family": "serif", "font.serif": ["Liberation Serif", "Times New Roman"], "font.size": 7.5,
                      "axes.spines.top": False, "axes.spines.right": False, "axes.linewidth": 0.6,
                      "axes.grid": True, "grid.color": "#e4e4e4", "grid.linewidth": 0.5, "legend.frameon": False,
