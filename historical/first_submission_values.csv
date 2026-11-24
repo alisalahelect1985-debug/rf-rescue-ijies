@@ -1,0 +1,47 @@
+id,first_submission_location,quantity,first_submission_value,revised_value_v1_1,revised_source,class,note
+1,6.2,homogeneous marginal outage,0.146489,0.146489,model.py (Regime),R,closed form; independent of sampling
+2,6.5,homogeneous certificate b=12 (%),88.281,88.281,results/hom.json,R,equals 1-p(K-b)/K whenever every token matches a distinct flow
+3,6.5,homogeneous certificate b=18 (%),89.746,89.746,results/hom.json,R,as above
+4,6.5,homogeneous certificate b=24 (%),91.211,91.211,results/hom.json,R,as above
+5,Table 4,four-flow exact loss: independent / aligned / interleaved / common (%),2.000 / 10.000 / 2.000 / 10.000,2.000 / 10.000 / 2.000 / 10.000,run_checks.py,R,exact expectation
+6,Table 4,four-flow any-miss probability (%),7.84 / 36.00 / 4.00 / 20.00,7.84 / 36.00 / 4.00 / 20.00,run_checks.py,R,exact
+7,6.7,five-flow example: nominal / certificate of shared token (%),81.672 / 73,81.672 / 73,closed form,R,exact
+8,6.7,five-flow example: nominal / certificate of singleton (%),80 / 80,80 / 80,closed form,R,exact
+9,5.3,hybrid tie example: independent rescue of pairs with / without token 1,0.91456 / 0.976,0.91456 / 0.976,run_misc.py (tie),R,exact
+10,4.3,conditioning-gap example: unconditional / conditional certificate,0.75 / 0.95,0.75 / 0.95,closed form,R,exact
+11,6.4,simultaneous Hoeffding margin (60 flows; 100 000 frames; level 0.05),0.006238,0.006238,run_checks.py,R,closed form
+12,6.5 Table 5,exact robust anchor b=12: mean / certificate (%),89.45 / 84.79,88.81 / 84.24,results/het.json,P,different geometry sample
+13,6.5 Table 5,independence greedy b=12: mean / certificate (%),90.38 / 84.63,90.03 / 84.06,results/het.json,P,different geometry sample
+14,6.5 Table 5,hybrid mu=1 b=12: mean / certificate (%),90.41 / 84.66,90.06 / 84.11,results/het.json,P,different geometry sample
+15,6.5 Table 5,portfolio b=12: mean / certificate (%),90.40 / 84.65,90.08 / 84.09,results/het.json,P,different geometry sample
+16,6.5 Table 5,conditional robust greedy b=12: mean / certificate (%),89.49 / 84.79,88.92 / 84.24,results/het.json,P,different geometry sample
+17,6.5 Table 5,cloud-informed greedy b=12: mean / certificate (%),90.43 / 84.64,90.14 / 84.07,results/het.json,P,different geometry sample
+18,6.5 Table 5,degree-first b=12: mean / certificate (%),87.24 / 84.12,86.97 / 83.67,results/het.json,P,different geometry sample
+19,6.5 Table 5,exact robust anchor b=24: mean / certificate (%),94.70 (94.705) / 89.69 (89.685),94.37 / 89.38,results/het.json,P,different geometry sample; tie rules move the anchor mean by at most 0.04 points (results/audit_ties.json)
+20,6.5 Table 5,independence greedy b=24: mean / certificate (%),95.38 (95.378) / 89.35 (89.347),95.32 / 89.07,results/het.json,P,different geometry sample
+21,6.5 Table 5,hybrid mu=1 b=24: mean / certificate (%),95.41 / 89.47,95.34 / 89.20,results/het.json,P,different geometry sample
+22,6.5 Table 5,portfolio b=24: mean / certificate (%),95.40 (95.397) / 89.46 (89.459),95.33 / 89.12,results/het.json,P,different geometry sample; two independent 24-geometry samples of v1.1 give 95.33 and 95.05
+23,6.5 Table 5,conditional robust greedy b=24: mean / certificate (%),94.78 / 89.68,94.52 / 89.38,results/het.json,P,different geometry sample
+24,6.5 Table 5,cloud-informed greedy b=24: mean / certificate (%),95.39 / 89.44,95.34 / 89.12,results/het.json,P,different geometry sample
+25,6.5 Table 5,degree-first b=24: mean / certificate (%),92.10 / 88.75,91.58 / 88.31,results/het.json,P,different geometry sample
+26,6.5,largest geometry-cluster 95% half-width in Table 5 (pp),0.64,0.94,results/het.json,P,different geometry sample
+27,6.5,paired portfolio-minus-independence b=18 (pp),0.0310 ± 0.0276,0.014 ± 0.017,results/het.json,P,different geometry sample
+28,6.5,paired certificate gain b=18 (pp),0.0637 ± 0.0424,0.053 ± 0.037,results/het.json,P,different geometry sample
+29,6.6,portfolio loss b=24: independence / shared weather / complete field (%),0.720 / 3.896 / 4.603,0.773 / 3.975 / 4.666,results/het.json,P,different geometry and failure sample
+30,6.6,complete-to-independent loss ratio b=24 / b=30,6.40 / 27,6.0 / 21,results/het.json,P,different geometry and failure sample
+31,6.6,radius study portfolio delivery at 0.5x / 4x radii (%),95.908 / 93.864,95.864 / 93.932,results/misc.json,P,different geometries and fields
+32,6.6,radius study half-widths at 0.5x / 4x (pp),0.238 / 0.152,0.265 / 0.240,results/misc.json,P,different geometries and fields
+33,6.7,independence-greedy floor violations at b=18 / 24 / 30 (of 24),1 / 4 / 6,1 / 4 / 6,results/het.json,P,counts coincide but the first-submission geometries cannot be recovered; the agreement does not verify the earlier computation
+34,Table 4,four-flow simulated loss: independent / aligned / interleaved / common (%),2.000 ± 0.027 / 9.978 ± 0.055 / 1.993 ± 0.038 / 10.053 ± 0.079,1.989 ± 0.027 / 9.966 ± 0.055 / 1.952 ± 0.038 / 9.997 ± 0.078,run_checks.py,P,different simulation draws
+35,6.4,field-sampler maximum marginal discrepancy (100 000 frames),0.003434,0.002799,run_checks.py,P,different geometry and draws; both below the 0.006238 margin
+36,6.7,six-flow references: binding instances / mean nominal cost / mean certificate gain / max gain,4 / 0.0353 / 0.0598 / 2.035,5 / 0.556 / 2.006 / 3.96,run_misc.py,P,different random instances; the first-submission instance generator was not documented; v1.1 averages over binding instances
+37,6.4,Hall identities / supermodularity inequalities verified,3232 / 8000,3288 / 13306,run_checks.py,P,counts depend on the random graphs; all identities hold in both
+38,6.4,multistate minimum greedy ratio (80 instances),0.9593,0.964,run_checks.py,P,different random instances; both above 1-1/e
+39,6.4,envelope vs LP maximum discrepancy,1.33e-15,1.11e-15,run_checks.py,M,agreement to machine precision reproduced; digits not comparable
+40,6.4,nested-chain discrepancy,6.67e-16,8.9e-16,run_checks.py,M,as above
+41,6.4,floor problems vs exhaustive search,8.89e-16,0,run_checks.py,M,as above
+42,6.4,quadrature vs Eq. (12) in the integral factor,3.94e-13,6.7e-16,run_checks.py,M,different quadrature routine and tolerance
+43,6.7,portfolio construction time het / hom (s); online matching per frame (us),2.74 / 1.85; 8.11,0.15 / 0.12; 0.96,run_misc.py,P,different implementation and host; not comparable
+44,5.3,non-monotone hybrid certificate example at mu = 0 / 0.34 / 0.38,0.752857 / 0.750000 / 0.752857,none,run_misc.py (search),W,instance not recoverable; a search over 4000 random instances found no non-monotone case; claim withdrawn
+45,6.1,master seed and derived seeds archived,stated,not available,—,A,the first-submission archive of code; derived seeds and per-geometry outputs could not be recovered
+46,6.6-7,covariance decomposition; supplementary runtime table; fairness diagnostics; ERA5 fetch-and-audit utility,described as archived,not available,—,A,not recoverable; not used in the revised manuscript

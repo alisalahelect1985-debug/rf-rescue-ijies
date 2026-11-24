@@ -1,7 +1,7 @@
 # Correlation-robust RF rescue for UAV-assisted optical satellite networks
 
 Code and results for the IJIES paper *"Correlation-Robust RF Rescue for UAV-Assisted Optical Satellite Networks:
-Capacity Cuts and Certified Resource Provisioning"* (Paper ID 20267022). Current version: **v1.1**. Every number, table and figure in
+Capacity Cuts and Certified Resource Provisioning"* (Paper ID 20267022). Current version: **v1.2**. Every number, table and figure in
 Section 6 and in the supplementary material is produced by the scripts below. All randomness derives from the
 master seed `20261001` through `numpy.random.SeedSequence`, so the results are reproduced exactly.
 
@@ -42,8 +42,10 @@ All paths are relative to the repository, so the scripts run from any folder on 
   key that produce it.
 * `audit/MANIFEST.json` records the version, package versions and a content hash of every result file
   (wall-clock timing fields removed, so the hashes are identical across reruns).
-* `CHANGELOG.md` documents the versions: **v1.0** = first revised manuscript, **v1.1** = second revision, and the
-  relation to the values of the first submission.
+* `CHANGELOG.md` documents the versions: **v1.0** = first revised manuscript, **v1.1** = second revision,
+  **v1.2** = third revision, and the relation to the values of the first submission.
+* `historical/` lists every first-submission result with its revised counterpart and a reproducibility class, and
+  `python historical/check_historical.py` recomputes the sample-independent ones.
 
 ## Result-to-file map
 | Paper item | Script | Output |

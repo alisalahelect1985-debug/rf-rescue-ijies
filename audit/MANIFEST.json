@@ -1,8 +1,8 @@
 {
- "version": "v1.1",
+ "version": "v1.2",
  "master_seed": 20261001,
  "python": "3.13.18",
- "platform": "Linux-6.18.44-fc-v470-x86_64-with-glibc2.39",
+ "platform": "Linux-6.18.44-fc-v819-x86_64-with-glibc2.39",
  "packages": {
   "numpy": "2.5.3",
   "scipy": "1.18.1",
@@ -103,7 +103,7 @@
    "sha256": "8c2da680ae33259ffdb98a05e07d5462fffa4775e17d1a9968d549eb14a91231"
   },
   "make_manifest.py": {
-   "sha256": "5ff8bbd3d2df5587b44370644e1760f971d0b2ddc8d6ac654efbf1fd6f7a96da"
+   "sha256": "150b1d295b2600d3ccd7e537647e94a03e18619f6dc3664155a9509cd862499e"
   },
   "model.py": {
    "sha256": "b8e731faa504c7c79411f22191df92826e3385cef416c784ef78f74c1060db88"
@@ -118,7 +118,7 @@
    "sha256": "8ae7681e9353d1410e04844914f4bd64029cb1ec0b9a2b9654ad3448e313627d"
   },
   "reproduce.py": {
-   "sha256": "cefb5d73ff742847a32134b1cd2b8ba5c63f4b1885b07e65f99a4401e9256ecb"
+   "sha256": "4e17ddebe1b731b7eb01f0454dd889205017cfdb7e70506d26b9f8b5413b679f"
   },
   "run_all.py": {
    "sha256": "a1794c2f342fd086573980f20f3d3d90faebf9e943b7ed7b81f7a27ecc83d1d5"
@@ -146,6 +146,15 @@
   },
   "verify_reproduction.py": {
    "sha256": "af49bb7878fa0fc82813ab631a9d20af337449b8b7a3edfea3e906558d093da3"
+  },
+  "historical/README.md": {
+   "sha256": "b1b90295ea94c0f0d5cf5b5867c5d8e499bd0895750080756b816cdd1abda6ef"
+  },
+  "historical/check_historical.py": {
+   "sha256": "10c8483a1b8c52eff58b83ce8d6db9ad44ab2ce0433783c192cac2d78b6d231d"
+  },
+  "historical/first_submission_values.csv": {
+   "sha256": "46a6fa59603557454f83a16f133671ce18e7f0cc932e9969f381353d52c0ee83"
   }
  }
 }
